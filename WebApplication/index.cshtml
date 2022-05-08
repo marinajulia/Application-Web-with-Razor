@@ -1,0 +1,54 @@
+﻿@{
+    var head = "App Razor";
+    var titulo = "Minha primeira aplicação Razor";
+    var paragrafo1 = "Razor é uma forma de marcação do APS.Net para linguagens de programação.";
+    var paragrafo2 = "ASP.Net é uma plataforma de desenvolvimento de páginas dinâmicas para criação de aplicações Web.";
+    string[] linguagens = { "C#", "Java", "PHP", "Python", "Visual Basic .Net", "TypeScript" };
+
+    var titulo1 = "Resultado da prova";
+    string[] alunos = { "joão", "marina", "ana", "carlos" };
+    int[] notas = { 2, 4, 1, 8 };
+    var resultado = "";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@head</title>
+    <link href="Style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div>
+        <h1>@titulo</h1>
+        <p>@paragrafo1</p>
+        <p>@paragrafo2</p>
+
+        <ul>
+            @foreach (var linguagem in linguagens)
+            {
+                <li>@linguagem</li>
+            }
+        </ul>
+    </div>
+    <p>_____________________________</p>
+    <div>
+        <h1>@titulo1</h1>
+        <ul>
+            @for (int i = 0; i <alunos.Length; i++)
+            {
+                if(notas[i] >= 4)
+                {resultado = "aprovado";}
+                else
+                {resultado = "reprovado";}
+
+                <li class="@resultado">
+                    @("Aluno: " + alunos[i] + ", nota: " + notas[i] + ", resultado: " +resultado)
+                </li>
+            }
+        </ul>
+    </div>
+
+</body>
+</html>
