@@ -8,8 +8,7 @@ namespace WebMVCRazor.Models
 {
     public class Carros
     {
-        private readonly static string _conn = @"Data Source=DESKTOP-SN81A5J\SQLEXPRESS;Integrated Security=True";
-
+        private readonly static string _conn = @"Data Source=DESKTOP-SN81A5J\SQLEXPRESS;Initial Catalog=AgenciaAuto;Integrated Security=True";
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Modelo { get; set; }
@@ -40,7 +39,7 @@ namespace WebMVCRazor.Models
         public static List<Carros> GetCarros()
         {
             var listaCarros = new List<Carros>();
-            var sql = "SELECT * FROM tb_Veiculos";
+            var sql = "SELECT * FROM Veiculos";
             try
             {
                 using (var cn = new SqlConnection(_conn))
