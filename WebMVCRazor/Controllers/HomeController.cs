@@ -19,7 +19,7 @@ namespace WebMVCRazor.Controllers
             ViewBag.Title = "Vende-se";
             ViewBag.Message = "Relação de carros";
 
-            var lista = Carros.GetCarros();
+            var lista = Veiculos.GetCarros();
             ViewBag.Lista = lista;
             return View();
         }

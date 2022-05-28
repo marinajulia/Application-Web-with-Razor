@@ -121,12 +121,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <None Include=".gitignore" />
+    <Compile Include="Controllers\VeiculosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Carros.cs" />
+    <Compile Include="Models\Veiculos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Views\Veiculos\Veiculos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

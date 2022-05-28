@@ -1,10 +1,30 @@
 ﻿<h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<ul>
-    @foreach(var item in ViewBag.Lista)
-     {
-        <li>@item.Nome</li>
-     }
-</ul>
+<p><a class="btn btn-default" href="/Veiculos"> Adicionar &raquo;</a></p>
+<br />
+<table>
+    <tr>
+        <td> Marca / Fabricante </td>
+        <td> Modelo </td>
+        <td> Ano <br/> Fabricação </td>
+        <td> Cor </td>
+        <td> Combustivel </td>
+        <td> Automatico </td>
+        <td> Valor </td>
+    </tr>
+
+    @foreach (var item in ViewBag.Lista)
+    {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.Modelo</td>
+            <td>@item.Fabricacao</td>
+            <td>@item.Cor</td>
+            <td>@item.Combustivel</td>
+            <td>@item.Automatico</td>
+            <td>@item.Valor</td>
+        </tr>
+    }
+</table>
 
