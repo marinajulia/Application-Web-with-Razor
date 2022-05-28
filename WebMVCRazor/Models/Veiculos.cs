@@ -81,7 +81,7 @@ namespace WebMVCRazor.Models
 
         public void Salvar()
         {
-            var sql = "INSERT INTO Veiculos (nome, modelo, ano, fabricacao, cor, combustivel, automatico" +
+            var sql = "INSERT INTO Veiculos (nome, modelo, ano, fabricacao, cor, combustivel, automatico," +
                 "valor, ativo) VALUES ( @nome, @modelo, @ano, @fabricacao, @cor, @combustivel, @automatico, @valor, @ativo)";
             try
             {

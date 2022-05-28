@@ -13,7 +13,14 @@ namespace WebMVCRazor
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("Veiculos", "Veiculos",
+            routes.MapRoute(
+               "VeiculosSalvar",
+               "Veiculos/Salvar",
+               new { controller = "Veiculos", action = "Salvar" });
+
+            routes.MapRoute(
+                "Veiculos",
+                "Veiculos",
                 new { controller = "Veiculos", action = "Veiculos" });
 
             routes.MapRoute(
